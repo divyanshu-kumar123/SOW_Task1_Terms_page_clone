@@ -1,0 +1,48 @@
+.language-switcher {
+  position: relative;
+}
+
+.current-language-btn,
+.language-option {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between text and flag */
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  width: 100%;
+}
+
+.current-language-btn img,
+.language-option img {
+  height: 24px;
+  width: 35px;
+  border-radius: 20%;
+  object-fit: cover;
+  border: 1px solid #fff;
+ 
+}
+
+.language-dropdown {
+  position: absolute;
+  top: 120%;
+  right: 0;
+  background-color: white;
+  border-radius: 8px;
+  padding: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  min-width: 150px; 
+}
+
+.language-dropdown .language-option {
+  color: #333;
+}
+
+.language-dropdown .language-option:hover {
+  background-color: #f0f0f0;
+  border-radius: 4px;
+}

@@ -1,0 +1,43 @@
+/* src/App.css */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-content {
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+  }
+  .terms-heading{
+    color: white;
+  }
+  .close-button {
+    background-color: rgb(8, 158, 30);
+    color: white;
+    border: none;
+    border-radius: 9999px; 
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: background-color 0.2s;
+  }
+  
+  .close-button:hover {
+    background-color: #2f855a;
+  }
+  
+  .error-message {
+    color: white;
+    background-color: #d32f2f;
+    padding: 1rem;
+    border-radius: 8px;
+  }
