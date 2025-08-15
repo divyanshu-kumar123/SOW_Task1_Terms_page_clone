@@ -16,21 +16,23 @@ function App() {
 
   useEffect(() => {
     const fetchData = async () => {
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:3001";
+  
       setIsLoading(true);
       setError(null);
       try {
         const [termsResponse, uiResponse] = await Promise.all([
-          fetch(`http://localhost:3001/api/terms/${language}`),
-          fetch(`http://localhost:3001/api/translations/${language}`)
+          fetch(`${apiUrl}/api/terms/${language}`),
+          fetch(`${apiUrl}/api/translations/${language}`),
         ]);
-
+  
         if (!termsResponse.ok || !uiResponse.ok) {
-          throw new Error('Data could not be fetched!');
+          throw new Error("Data could not be fetched!");
         }
-
+  
         const terms = await termsResponse.json();
         const ui = await uiResponse.json();
-
+  
         setTermsData(terms);
         setUiStrings(ui);
       } catch (err) {
@@ -39,7 +41,7 @@ function App() {
         setIsLoading(false);
       }
     };
-
+  
     fetchData();
   }, [language]);
 
