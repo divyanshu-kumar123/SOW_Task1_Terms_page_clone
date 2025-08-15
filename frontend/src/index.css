@@ -10,6 +10,6 @@ body {
     -moz-osx-font-smoothing: grayscale;
     background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg');
     background-size: cover;
-    background-attachment: scroll;
+    background-attachment: fixed;
     height: 100vh;
   }
