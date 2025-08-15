@@ -98,12 +98,12 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align text to the left */
+  align-items: flex-start; 
   gap: 1rem;
 }
 
 .nav-links-mobile a {
-  color: #333; /* Dark text for light background */
+  color: #333; 
   text-decoration: none;
   font-weight: 500;
   font-size: 15px;
@@ -113,7 +113,7 @@
 /* --- Responsive Styles for Mobile/Tablet --- */
 @media (max-width: 768px) {
   .header-logo {
-    display: none; /* Hide logo on mobile */
+    display: none; 
   }
 
   .app-header {
@@ -123,10 +123,10 @@
     justify-content: space-between;
   }
   .hamburger-menu {
-    display: flex; /* Show hamburger on mobile */
+    display: flex; 
   }
 
   .nav-menu-desktop {
-    display: none; /* Hide desktop nav links */
+    display: none; 
   }
 }

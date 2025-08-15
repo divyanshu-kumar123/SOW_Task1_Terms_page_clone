@@ -1,4 +1,3 @@
-// src/components/LanguageSwitcher.jsx
 import { useState, useEffect, useRef } from 'react';
 import '../styles/LanguageSwitcher.css';
 
@@ -35,7 +34,6 @@ const LanguageSwitcher = ({ currentLanguage, onLanguageChange, uiStrings }) => {
 
       {isOpen && (
         <div className="language-dropdown">
-          {/* Change: Remove the .filter() to show all languages */}
           {Object.keys(languages).map((lang) => (
               <button key={lang} className="language-option" onClick={() => handleLanguageSelect(lang)}>
                 <span>{languages[lang].name}</span>

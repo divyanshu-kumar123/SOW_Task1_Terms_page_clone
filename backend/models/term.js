@@ -1,5 +1,5 @@
 const { DataTypes } = require('sequelize');
-const sequelize = require('../config/database'); // Updated path
+const sequelize = require('../config/database'); 
 
 const Term = sequelize.define('Term', {
   language_code: {

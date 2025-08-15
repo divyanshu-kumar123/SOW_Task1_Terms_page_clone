@@ -1,25 +1,20 @@
-// src/components/Header.jsx
 import { useState, useRef, useCallback } from 'react';
 import LanguageSwitcher from './LanguageSwitcher';
-import useOnClickOutside from '../hooks/useOnClickOutside'; // Import the new hook
+import useOnClickOutside from '../hooks/useOnClickOutside'; 
 import '../styles/Header.css';
 
 const Header = ({ language, setLanguage, uiStrings }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = ['nav_home', 'nav_order', 'nav_clients', 'nav_about', 'nav_contact'];
 
-  // Create a ref for the mobile menu
   const mobileMenuRef = useRef();
 
-  // Function to close the menu
   const closeMenu = useCallback(() => setIsMenuOpen(false), []);
 
-  // Use the hook to close the menu when clicking outside
   useOnClickOutside(mobileMenuRef, closeMenu);
 
   const handleMenuLinkClick = () => {
     closeMenu();
-    // You can add navigation logic here in the future
   };
 
   return (
@@ -57,7 +52,6 @@ const Header = ({ language, setLanguage, uiStrings }) => {
         </div>
       </div>
 
-      {/* Attach the ref to the mobile menu dropdown */}
       {isMenuOpen && (
         <div className="nav-menu-mobile" ref={mobileMenuRef}>
           <ul className="nav-links-mobile">

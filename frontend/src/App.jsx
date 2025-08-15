@@ -1,10 +1,8 @@
-// src/App.jsx
-
 import { useState, useEffect } from 'react';
 import Header from './components/Header';
 import TermsCard from './components/TermsCard';
-import PageTitle from './components/PageTitle'; // Import PageTitle
-import CloseButton from './components/CloseButton'; // Import CloseButton
+import PageTitle from './components/PageTitle'; 
+import CloseButton from './components/CloseButton'; 
 import './App.css';
 
 function App() {

@@ -10,7 +10,7 @@
   padding: 8px;
   display: flex;
   align-items: center;
-  gap: 0.5rem; /* Space between text and flag */
+  gap: 0.5rem; 
   color: white;
   font-weight: 500;
   font-size: 15px;

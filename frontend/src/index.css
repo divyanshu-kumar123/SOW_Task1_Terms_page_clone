@@ -8,11 +8,8 @@ body {
       sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-  
-    /* Background image setup */
     background-image: url('https://storage.123fakturera.se/public/wallpapers/sverige43.jpg');
     background-size: cover;
-    /* background-position: center center; */
     background-attachment: fixed;
     height: 100vh;
   }

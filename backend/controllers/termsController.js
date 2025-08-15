@@ -3,7 +3,7 @@ const sequelize = require('../config/database');
 const getTermsByLang = async (request, reply) => {
   try {
     const { lang } = request.params;
-    const { Term } = sequelize.models; // Access model via sequelize
+    const { Term } = sequelize.models; 
     
     const term = await Term.findOne({ where: { language_code: lang } });
 
@@ -21,7 +21,6 @@ const getTermsByLang = async (request, reply) => {
 const getUiTranslations = async (request, reply) => {
   try {
     const { lang } = request.params;
-    // We'll query the database directly here for simplicity
     const [results] = await sequelize.query(
       'SELECT element_key, element_value FROM ui_translations WHERE language_code = :lang',
       { replacements: { lang } }
@@ -40,5 +39,4 @@ const getUiTranslations = async (request, reply) => {
   }
 };
 
-// Make sure to add it to the exports
 module.exports = { getTermsByLang, getUiTranslations };
