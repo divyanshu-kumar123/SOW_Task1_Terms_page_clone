@@ -96,25 +96,37 @@
 
   .nav-menu {
     display: none;
-    margin-left: 0; 
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    /* Position it below the header */
+    top: 80px; /* Adjust as needed */
+    right: 20px;
+    /* Give it a size */
+    width: auto;
+    /* Style it like a dropdown */
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 
   .nav-menu.open {
-    display: flex; 
+    display: flex; /* This makes it visible */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
   
   .nav-links {
     flex-direction: column; 
     margin: 0 0 2rem 0; 
     margin-right: 0;
+  }
+  .nav-links li{
+
+    padding: 5px 3px;
+  }
+  
+  .nav-links a{
+    color: black;
   }
 }
