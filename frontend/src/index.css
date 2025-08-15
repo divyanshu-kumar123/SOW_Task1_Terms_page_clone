@@ -12,4 +12,6 @@ body {
     background-size: cover;
     background-attachment: fixed;
     height: 100vh;
+    will-change: transform; /* hint for smoother rendering */
+  transform: translateZ(0); /* GPU acceleration */
   }
