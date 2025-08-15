@@ -1,3 +1,6 @@
+/* src/styles/Header.css */
+
+/* --- Main Header Structure --- */
 .app-header {
   padding: 20px 0;
   position: absolute;
@@ -11,7 +14,13 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 8.5rem;
+  padding: 0 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-left-section {
   display: flex;
   align-items: center;
 }
@@ -19,15 +28,13 @@
 .header-logo {
   height: 40px;
   width: auto;
-  z-index: 11; 
+  z-index: 11;
 }
 
-/* --- Navigation Menu --- */
-
-.nav-menu {
+/* --- Desktop Navigation --- */
+.nav-menu-desktop {
   display: flex;
   align-items: center;
-  margin-left: auto; 
 }
 
 .nav-links {
@@ -36,7 +43,7 @@
   margin: 0;
   display: flex;
   align-items: center;
-  margin-right: 2rem;
+  margin-left: 2rem; /* Space between logo and nav */
 }
 
 .nav-links li {
@@ -46,19 +53,13 @@
 .nav-links a {
   color: white;
   text-decoration: none;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 15px;
-  transition: color 0.2s ease-in-out;
 }
 
-.nav-links a:hover {
-  color: #ddd;
-}
-
-/* --- Hamburger Menu for Mobile --- */
-
+/* --- Hamburger Menu --- */
 .hamburger-menu {
-  display: none; 
+  display: none; /* Hidden on desktop */
   flex-direction: column;
   justify-content: space-around;
   width: 2rem;
@@ -75,58 +76,50 @@
   height: 0.25rem;
   background: white;
   border-radius: 10px;
-  transition: all 0.3s linear;
 }
 
-/* --- Responsive Styles for Mobile/Tablet --- */
+/* --- Mobile Menu Dropdown --- */
+.nav-menu-mobile {
+  display: flex; /* This is controlled by the component logic */
+  position: absolute;
+  top: 80px;
+  left: 20px; /* Positioned on the left */
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
+.nav-links-mobile {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align text to the left */
+  gap: 1rem;
+}
+
+.nav-links-mobile a {
+  color: #333; /* Dark text for light background */
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+
+/* --- Responsive Styles for Mobile/Tablet --- */
 @media (max-width: 768px) {
-  .app-header {
-    padding: 20px;
-  }
-  
-  .header-container {
-    padding: 0; 
+  .header-logo {
+    display: none; /* Hide logo on mobile */
   }
 
   .hamburger-menu {
-    display: flex; 
-    margin-left: auto; 
+    display: flex; /* Show hamburger on mobile */
   }
 
-  .nav-menu {
-    display: none;
-    position: absolute;
-    /* Position it below the header */
-    top: 80px; /* Adjust as needed */
-    right: 20px;
-    /* Give it a size */
-    width: auto;
-    /* Style it like a dropdown */
-    background-color: rgba(255, 255, 255, 0.95);
-    border-radius: 8px;
-    padding: 1rem;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  }
-
-  .nav-menu.open {
-    display: flex; /* This makes it visible */
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .nav-links {
-    flex-direction: column; 
-    margin: 0 0 2rem 0; 
-    margin-right: 0;
-  }
-  .nav-links li{
-
-    padding: 5px 3px;
-  }
-  
-  .nav-links a{
-    color: black;
+  .nav-menu-desktop {
+    display: none; /* Hide desktop nav links */
   }
 }
