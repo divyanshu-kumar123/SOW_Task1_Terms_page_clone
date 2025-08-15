@@ -24,14 +24,15 @@ const Header = ({ language, setLanguage, uiStrings }) => {
 
   return (
     <header className="app-header">
-      <div className="header-container">
-        
-        <div className="header-left-section">
-          <img 
+        <img 
             src="https://storage.123fakturera.se/public/icons/diamond.png" 
             alt="123fakturera Logo" 
             className="header-logo"
           />
+      <div className="header-container">
+    
+        <div className="header-left-section">
+         
           <button className="hamburger-menu" onClick={() => setIsMenuOpen(!isMenuOpen)}>
             <div className="bar"></div>
             <div className="bar"></div>

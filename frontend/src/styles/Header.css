@@ -2,7 +2,8 @@
 
 /* --- Main Header Structure --- */
 .app-header {
-  padding: 20px 0;
+  padding: 1.5rem 9rem;
+  display: flex;
   position: absolute;
   top: 0;
   left: 0;
@@ -17,7 +18,7 @@
   padding: 0 15px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: end;
 }
 
 .header-left-section {
@@ -80,10 +81,10 @@
 
 /* --- Mobile Menu Dropdown --- */
 .nav-menu-mobile {
-  display: flex; /* This is controlled by the component logic */
+  display: flex; 
   position: absolute;
   top: 80px;
-  left: 20px; /* Positioned on the left */
+  left: 20px; 
   width: auto;
   background-color: rgba(255, 255, 255, 0.95);
   border-radius: 8px;
@@ -115,6 +116,12 @@
     display: none; /* Hide logo on mobile */
   }
 
+  .app-header {
+    padding: 1.5rem 2rem;
+  }
+  .header-container{
+    justify-content: space-between;
+  }
   .hamburger-menu {
     display: flex; /* Show hamburger on mobile */
   }
